@@ -1,0 +1,6 @@
+neton_app:
+    resource: "@NetonAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+direct:
+    resource: "@DirectBundle/Resources/config/routing.yml"

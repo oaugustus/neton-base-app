@@ -1,0 +1,7 @@
+parameters:
+#    neton_app.example.class: Neton\AppBundle\Example
+
+services:
+#    neton_app.example:
+#        class: %neton_app.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
