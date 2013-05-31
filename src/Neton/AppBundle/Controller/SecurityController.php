@@ -16,18 +16,21 @@ class SecurityController extends SessionController
      * Método de autentiacação do usuário.
      * 
      * @remote
+     * @anonymous
      * @param {Array} $params
      */
     public function authAction($params)
-    {        
+    {
+        /*
         // pega o gerenciador de entidades
         $em = $this->getDoctrine()->getManager();
-        
+
+         * Esqueleto do código de autenticação
         // tenta localizar o usuário pelo seu username e senha
         $found = $em->getRepository('NetonAppBundle:Usuario')->findToAuth($params['login'], $params['pass']);
         
         // se o usuário existir
-        if ($found['code'] == 200){
+        if ($found['message'] == 200) {
             $user = $found['user'];
             
             // registra a sessão para o usuário
@@ -48,7 +51,23 @@ class SecurityController extends SessionController
                 'code' => $found['code'], // código de erro
             );
         }
-        
+        */
+
+        // @mock
+        $this->registerSession(array(
+            'user.id' => '1',
+            'user.login' => 'otavio',
+            'user.name' => 'Otávio Fernandes',
+            'user.pass' => md5('12345')
+        ));
+
+        $response = array(
+            'success' => true,
+            'message' => 'authenticated'
+        );
+
+        // @endmock
+
         // retorna o resultado da autenticação
         return $response;
     }
@@ -61,6 +80,10 @@ class SecurityController extends SessionController
      */
     public function changePassAction($params)
     {
+        /**
+         * Esqueleto do método de alteração de senha
+         *
+
         $em = $this->getDoctrine()->getManager();
         $pass = $this->getSessionVar('user.pass');
         $id = $this->getSessionVar('user.id');
@@ -78,17 +101,25 @@ class SecurityController extends SessionController
         } else {
             return false;
         }
+         */
 
+        // @mock
+        return true;
     }
 
     /**
      * Recupera a senha da conta do usuário.
      *
      * @remote
+     * @anonymous
      * @param $params
      */
     public function recoverPassAction($params)
     {
+
+        /**
+         * Esqueleto do método de recuperação de senha
+
         $em = $this->getDoctrine()->getManager();
 
         $user = $em->getRepository('NetonAppBundle:Usuario')->findOneBy(
@@ -107,7 +138,7 @@ class SecurityController extends SessionController
                     /*$this->renderView(
                         'HelloBundle:Hello:email.txt.twig',
                         array('name' => $name)
-                    )*/
+                    )
                 )
             ;
             $this->get('mailer')->send($message);
@@ -116,12 +147,17 @@ class SecurityController extends SessionController
         } else {
             return false;
         }
+         */
+
+        // @mock
+        return true;
     }
     
     /**
      * Encerra uma sessão aberta para o usuário.
      * 
      * @remote
+     * @anonymous
      * @param Array $params 
      */
     public function logoutAction($params)
@@ -137,6 +173,7 @@ class SecurityController extends SessionController
      * Verifica se o usuário está logado
      * 
      * @remote
+     * @anonymous
      * @param Array $params
      * @return [Boolean/Array]
      */

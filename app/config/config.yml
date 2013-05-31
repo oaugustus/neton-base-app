@@ -67,3 +67,4 @@ swiftmailer:
 direct:
   api:
     session_attribute: session
+    default_access: secure
