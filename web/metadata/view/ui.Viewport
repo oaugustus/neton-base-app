@@ -1,0 +1,162 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ui.Viewport",
+        "designer|userAlias": "uiviewport",
+        "requires": [
+            "Neton.window.Flash"
+        ],
+        "designer|initialView": true,
+        "layout": "card"
+    },
+    "designerId": "1482c17c-7c96-4250-b20e-c8532baf6c47",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "itemId": "ctLoading",
+                "layout": "vbox"
+            },
+            "designerId": "69748fd6-4e3d-47eb-b29f-e05490e4eebc",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "cls": "loading-ct",
+                        "height": 40,
+                        "html": "Verificando sessão...",
+                        "itemId": "ctInfo",
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "html": "string"
+                    },
+                    "designerId": "37d0960a-27f9-4c9d-b704-53a8bef12dc1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "baseCls": null,
+                "itemId": "panelLogin",
+                "layout": "vbox",
+                "bodyBorder": false,
+                "bodyStyle": "background-color: transparent !important;"
+            },
+            "configAlternates": {
+                "bodyStyle": "string"
+            },
+            "designerId": "156fce59-bd88-436f-9463-2c7f1a77d607",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "cls": "sys-toolbar",
+                        "itemId": "loginToolbar"
+                    },
+                    "designerId": "2c2c3a93-135c-41ac-882e-5bd21431df4d",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "cls": "logo",
+                                "height": 50,
+                                "itemId": "ctLogo",
+                                "style": [
+                                    "{",
+                                    "    backgroundColor: '#fff'",
+                                    "}"
+                                ],
+                                "width": 214
+                            },
+                            "designerId": "280fce32-31c2-44f7-af4f-aba7c4c80e96"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "7227d80f-f4fd-45ee-9a2f-abb9ec551ec1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|margins": null,
+                        "dock": "top",
+                        "height": 1,
+                        "itemId": "ctSeparator",
+                        "margin": null,
+                        "style": "background-color: #fff;"
+                    },
+                    "configAlternates": {
+                        "style": "string"
+                    },
+                    "designerId": "03717de1-a400-4edd-a64b-d21db9f3f1a1"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "designerId": "b19e4d0d-1f29-4c02-92cd-17c2177b9433",
+                    "masterInstanceId": "cc4f24e4-a32f-425a-8b11-9b48b365d987"
+                }
+            ]
+        }
+    ]
+}

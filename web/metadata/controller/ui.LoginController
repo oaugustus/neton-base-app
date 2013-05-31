@@ -1,0 +1,340 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "routeAlias": "login",
+        "routes": [
+            "{",
+            "    '/': 'index'",
+            "}"
+        ],
+        "designer|userClassName": "ui.LoginController"
+    },
+    "configAlternates": {
+        "routes": "object"
+    },
+    "designerId": "d0af4295-3539-4295-bf9e-d13daab340d1",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "routeAlias",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "routes",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "panelLoginActivate",
+                "implHandler": [
+                    "// coloca o foco no campo de login",
+                    "component.down('#txtLogin').focus(false, 250);"
+                ],
+                "name": "activate",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "loginpanel #panelLogin"
+            },
+            "designerId": "134cb786-e80f-4eef-a24b-c6c6c1075aa5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "panelRecuperarSenhaActivate",
+                "implHandler": [
+                    "// coloca o foco no campo de e-mail",
+                    "component.down('#txtEmail').focus(false, 250);"
+                ],
+                "name": "activate",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "loginpanel #panelRecuperarSenha"
+            },
+            "designerId": "f86f4332-47b7-472e-8ad3-e26ded933d93"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "txtLoginKeyPress",
+                "implHandler": [
+                    "var form = textfield.up('form');",
+                    "",
+                    "// se pressionou a tecla enter",
+                    "if (e.getKey() == 13) {",
+                    "    // coloca o foco no campo de senha",
+                    "    form.down('#txtSenha').focus();",
+                    "}"
+                ],
+                "name": "keypress",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "loginpanel #txtLogin"
+            },
+            "designerId": "7f2a2e15-b54d-4514-9693-217fd4704b89"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "txtPassKeyPress",
+                "implHandler": [
+                    "var form = textfield.up('form');",
+                    "",
+                    "// se pressionou a tecla enter",
+                    "if (e.getKey() == 13){",
+                    "    // aciona a ação de clique do botão de acesso",
+                    "    this.acessarClick(form.down('#btnAcessar'));",
+                    "}"
+                ],
+                "name": "keypress",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "loginpanel #txtSenha"
+            },
+            "designerId": "e293dab3-17b8-4cfc-9527-8d27963ecdc1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "acessarClick",
+                "implHandler": [
+                    "var form = button.up('form');",
+                    "",
+                    "// se o formulário estiver válido",
+                    "if (form.isValid()) {",
+                    "    form.up('loginpanel').setLoading('Validando usuário...');",
+                    "",
+                    "    // chama o método remoto de validação de autenticação",
+                    "    Actions.NetonApp_Security.auth(form.getValues(), this.onAuthResponse, this);",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "loginpanel #btnAcessar"
+            },
+            "designerId": "f2d24d43-4eae-4a70-9c6e-cf0e46942a21"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "txtEmailKeyPress",
+                "implHandler": [
+                    "var form = textfield.up('form');",
+                    "",
+                    "// se pressionou a tecla enter",
+                    "if (e.getKey() == 13){",
+                    "    // aciona a ação de recuperar senha",
+                    "    this.recuperarSenhaClick(form.down('#btnSolicitarSenha'));",
+                    "}"
+                ],
+                "name": "keypress",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "loginpanel #txtEmail"
+            },
+            "designerId": "0385046d-2b11-4517-8811-3f7b6109330f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "recuperarSenhaClick",
+                "implHandler": [
+                    "var form = button.up('form');",
+                    "",
+                    "// se o formulário for válido",
+                    "if (form.isValid()){",
+                    "    form.up('loginpanel').setLoading('Solicitando recuperação...');",
+                    "",
+                    "    Actions.NetonApp_Security.recoverPass(form.getValues(), this.onRecoverPassResponse, this)",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "loginpanel #btnSolicitarSenha"
+            },
+            "designerId": "e9f7018a-def2-4aba-a1f4-89c6442df3fb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "authError": [
+                    "{",
+                    "    'usuario' : {",
+                    "        'message' : 'Usuário ou senha inválidos',",
+                    "        'width': 250",
+                    "    }",
+                    "}"
+                ],
+                "fn": "onAuthResponse",
+                "designer|params": [
+                    "response"
+                ],
+                "implHandler": [
+                    "// se a autenticação ocorreu",
+                    "if (response.success){",
+                    "    this.getLoginPanel().setLoading(false);",
+                    "    this.getController('ui.DashboardController').showDashboardPanel();",
+                    "} else {",
+                    "    Neton.Msg.flash({",
+                    "        type: 'error',",
+                    "        msg: this.authError[response.message].message,",
+                    "        width: this.authError[response.message].width",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "authError": "object"
+            },
+            "designerId": "bbd82a84-f73b-4306-bf7d-7c41318cf334",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "authError",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showLoginPanel",
+                "implHandler": [
+                    "this.getUiViewport().getLayout().setActiveItem('panelLogin');"
+                ]
+            },
+            "designerId": "d0ece62a-6466-4372-a180-498497c6f36c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRecoverPassResponse",
+                "designer|params": [
+                    "response"
+                ],
+                "implHandler": [
+                    "// oculta a máscara de carregamento",
+                    "this.getLoginPanel().setLoading(false);",
+                    "",
+                    "if (response === true){",
+                    "    Neton.Msg.flash({",
+                    "        type: 'success',",
+                    "        msg: 'Sua senha foi enviada para o seu email',",
+                    "        width: 300",
+                    "    });",
+                    "} else {",
+                    "    Neton.Msg.flash({",
+                    "        type: 'error',",
+                    "        msg: 'Usuário não localizado!',",
+                    "        width: 200",
+                    "    });",
+                    "}"
+                ]
+            },
+            "designerId": "bb4a7152-0a9a-426c-82e4-cd07bd3c8c99"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginPanel",
+                "selector": "loginpanel",
+                "xtype": "Ext.panel.Panel"
+            },
+            "designerId": "07c33369-2fd4-4a83-9d49-4c19ddf75d5c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "uiViewport",
+                "selector": "uiviewport",
+                "xtype": "Ext.container.Viewport"
+            },
+            "designerId": "0fc0fc77-d2a3-4914-8323-c3017e3c1206"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "index",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "f8b5c961-5640-42f1-8144-7d34c9002856"
+        }
+    ]
+}

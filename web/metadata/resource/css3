@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css3",
+        "url": null,
+        "id": "font-awesome"
+    },
+    "designerId": "e8094b29-0f10-4dd9-8b23-2f7e09e6d246"
+}

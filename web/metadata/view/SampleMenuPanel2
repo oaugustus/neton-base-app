@@ -1,0 +1,84 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SampleMenuPanel2",
+        "designer|userAlias": "samplemenupanel2",
+        "title": "Cadastro"
+    },
+    "designerId": "328a9e02-3118-4dfe-b019-811757f05e65",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "designerId": "a48252c0-d108-4914-9ee4-8d1502fe7a6b",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "module": "startup",
+                        "layout|flex": null,
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "iconAlign": "top",
+                        "iconCls": "teste",
+                        "scale": "medium",
+                        "text": "Painel",
+                        "toggleGroup": "module"
+                    },
+                    "designerId": "35c73b49-a263-47aa-ad85-0191da7ff23c",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "module",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "module": "container",
+                        "layout|flex": null,
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "iconAlign": "top",
+                        "iconCls": "icon-exit",
+                        "scale": "medium",
+                        "text": "Container",
+                        "toggleGroup": "module"
+                    },
+                    "designerId": "0ea009e2-d817-41ea-9c6d-14e35d59a9b0",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "module",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

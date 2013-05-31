@@ -1,0 +1,13 @@
+{
+    "type": "directresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "direct",
+        "url": "http://localhost/neton-base-app/web/remoting.js"
+    },
+    "designerId": "8684dad1-1f57-4f01-927b-e97c84552beb"
+}

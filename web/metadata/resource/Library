@@ -1,0 +1,15 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Library",
+        "basePath": "./extjs/",
+        "debug": true,
+        "theme": "neptune"
+    },
+    "designerId": "0d051565-525f-4c70-bdc5-3be9a272fcc3"
+}

@@ -1,0 +1,146 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "enableRouter": false,
+        "views": [
+            "ui.LoginPanel",
+            "ui.Viewport",
+            "ui.DashboardPanel",
+            "ui.ChangePassWindow",
+            "SampleMenuPanel1",
+            "SampleMenuPanel2"
+        ],
+        "requires": [
+            "Ext.ux.Router"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "ui.LoginController",
+            "ui.DashboardController",
+            "module.SampleController"
+        ],
+        "name": "App"
+    },
+    "configAlternates": {
+        "enableRouter": "boolean"
+    },
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "enableRouter",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Actions.NetonApp_Security.isLogged({}, function(response){",
+                    "if (response === false){",
+                    "    // mostra a página de login",
+                    "    this.getController('ui.LoginController').showLoginPanel();",
+                    "} else {",
+                    "    this.setSession(response);",
+                    "    this.getController('ui.DashboardController').showDashboardPanel(response);",
+                    "    ",
+                    "    // registra o código de verificação da sessão aberta",
+                    "\tExt.TaskManager.start({",
+                    "        run: this.keepSession,",
+                    "        interval: 60000",
+                    "    });\t",
+                    "}",
+                    "},this);"
+                ]
+            },
+            "designerId": "64d42f5a-35ca-43e9-896b-68ba07f67431"
+        },
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enabled": true,
+                "paths": [
+                    "{",
+                    "    \"Ext\":\".\",",
+                    "    \"Ext.ux\":\"./extjs/ux/\",",
+                    "    \"Neton\":\"./extjs/ux/\",",
+                    "}"
+                ],
+                "designer|displayName": "Loader"
+            },
+            "designerId": "59285e37-7d8c-46bb-83d5-7f6bdbb78940"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setSession",
+                "designer|params": [
+                    "session"
+                ],
+                "implHandler": [
+                    "this.session = session;"
+                ]
+            },
+            "designerId": "bf5d5e2f-df14-4f85-93e6-d0e6be727fd3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getSession",
+                "implHandler": [
+                    "return this.session;"
+                ]
+            },
+            "designerId": "e57f3571-a09c-46c7-a98b-a2f1ed2ec846"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "keepSession",
+                "implHandler": [
+                    "Actions.NetonApp_Security.isLogged({}, function(response){",
+                    "    if (response === false){",
+                    "        Ext.Msg.alert('SESSÃO EXPIRADA','Sua sessão expirou e foi fechada. Efetue login novamente!', function(){",
+                    "            location.reload();",
+                    "        });",
+                    "        ",
+                    "    }",
+                    "},this);"
+                ]
+            },
+            "designerId": "bc3fa2ab-607d-44d7-a80b-9e0dadd17024"
+        }
+    ]
+}

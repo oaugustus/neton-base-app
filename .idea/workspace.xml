@@ -36,13 +36,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SecurityController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SecurityController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Neton/AppBundle/Controller/SecurityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="0" selection-start="4498" selection-end="4515" vertical-scroll-proportion="0.21814671">
+            <state line="175" column="0" selection-start="4498" selection-end="4515" vertical-scroll-proportion="-4.7083335">
               <folding>
                 <element signature="e#46#105#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="0.78185326">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -693,11 +702,6 @@
         <state line="21" column="30" selection-start="932" selection-end="932" vertical-scroll-proportion="0.55452865" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="0.74861366" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Neton/AppBundle/Doctrine/Filter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.083179295" />
@@ -781,10 +785,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Neton/AppBundle/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="0" selection-start="4498" selection-end="4515" vertical-scroll-proportion="0.21814671">
+        <state line="175" column="0" selection-start="4498" selection-end="4515" vertical-scroll-proportion="-4.7083335">
           <folding>
             <element signature="e#46#105#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="0.78185326">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,72 @@
+body{
+    background-image: url(../images/body-bg.png) !important;
+}
+
+.logo{
+    background-image: url(../images/logo.png) !important;
+    width: 260px;
+    height: 50px;
+}
+
+/* overrides */
+.x-tip {
+    maxWidth: 300 !important;
+}
+.x-tip-body {
+    width: auto !important;
+}
+.x-tip-body span {
+    width: auto !important;
+}
+
+.x-mask-msg-text {
+    padding: 2px 0px 2px 20px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+.x-mask-msg-inner {
+    color: #666;
+    font: normal 11px helvetica,arial,verdana,sans-serif;
+}
+
+/* Estilo da toolbar principal do sistema */
+.sys-toolbar{
+   /* background-color: #ECECEC !important;*/
+    border-bottom: solid 1px #DDDDDD !important;    
+}
+
+.sys-toolbar .x-btn-inner{
+    color: #AAA;
+}
+
+.sys-toolbar .x-btn-pressed .x-btn-inner{
+    color: #666;
+}
+
+.loading-ct{
+    background-image: url(../images/loading-16.gif);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+    padding: 12px 5px 0px 25px;
+}
+
+.label-bold{
+    font-weight: bold;
+    color: #555;
+}
+
+.breadcrumb {
+  padding: 8px 15px;
+  margin: 0 0 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}

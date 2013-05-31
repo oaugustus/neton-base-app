@@ -1,0 +1,258 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "frame": true,
+        "height": null,
+        "width": 304,
+        "designer|userClassName": "ui.LoginPanel",
+        "designer|userAlias": "loginpanel",
+        "layout": "fit",
+        "iconCls": null,
+        "title": "Acesso restrito"
+    },
+    "designerId": "cc4f24e4-a32f-425a-8b11-9b48b365d987",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "tab",
+                "activeTab": 0
+            },
+            "designerId": "2eb4b5c5-0e74-404d-8e71-f633d48dba3d",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 161,
+                        "itemId": "panelLogin",
+                        "defaults": [
+                            "{",
+                            "    labelAlign: 'top',",
+                            "    msgTarget: 'side'",
+                            "}"
+                        ],
+                        "bodyPadding": 15,
+                        "title": "Login"
+                    },
+                    "designerId": "a88f1544-07be-4a6f-89e2-182d53ed4a3e",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": null
+                            },
+                            "designerId": "2b6bb7d8-2f45-4cf2-8c3b-fab6abe2d64b"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "itemId": "txtLogin",
+                                "fieldLabel": "Login",
+                                "labelClsExtra": "label-bold",
+                                "name": "login",
+                                "allowBlank": false,
+                                "enableKeyEvents": true
+                            },
+                            "designerId": "ead56b37-dc4a-4634-b59f-a7dce1758151"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "itemId": "txtSenha",
+                                "fieldLabel": "Senha",
+                                "labelClsExtra": "label-bold",
+                                "name": "senha",
+                                "inputType": "password",
+                                "allowBlank": false,
+                                "enableKeyEvents": true
+                            },
+                            "designerId": "99d2806e-edf4-4452-a230-69a45913ca97"
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom"
+                            },
+                            "designerId": "b72bb6c6-9eae-485d-ba23-85775534a3e6",
+                            "cn": [
+                                {
+                                    "type": "Ext.toolbar.Fill",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null
+                                    },
+                                    "designerId": "f1b54538-3f5b-44f2-89f0-06db37251aca"
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null
+                                    },
+                                    "designerId": "ee644c00-0fd5-498c-8255-0589b91dc955",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "formBind": true,
+                                                "itemId": "btnAcessar",
+                                                "margin": "0 5 0 0",
+                                                "scale": "medium",
+                                                "text": "Acessar"
+                                            },
+                                            "designerId": "24c0391a-2cbe-4c14-8859-72b92fef9264"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "itemId": "panelRecuperarSenha",
+                        "defaults": [
+                            "{",
+                            "    labelAlign: 'top',",
+                            "    labelClsExtra: 'label-bold',",
+                            "    msgTarget: 'side'",
+                            "}"
+                        ],
+                        "bodyPadding": 15,
+                        "title": "Recuperar senha"
+                    },
+                    "designerId": "556571ff-f79d-4723-9f30-ab971b5e86cc",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "a824386f-d559-448d-ac43-d864c9663981"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "itemId": "txtEmail",
+                                "fieldLabel": "Email",
+                                "name": "email",
+                                "allowBlank": false,
+                                "enableKeyEvents": true,
+                                "vtype": "email"
+                            },
+                            "designerId": "b2d8f32b-70a8-4e4c-87df-1837f0290b57"
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom"
+                            },
+                            "designerId": "6691e67c-f28e-44a7-a806-c0719e0815e3",
+                            "cn": [
+                                {
+                                    "type": "Ext.toolbar.Fill",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null
+                                    },
+                                    "designerId": "5c2146ae-21a6-462c-892b-80251007b565"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "layout|margins": "0 5 0 0",
+                                        "formBind": true,
+                                        "itemId": "btnSolicitarSenha",
+                                        "scale": "medium",
+                                        "text": "Solicitar a senha"
+                                    },
+                                    "designerId": "89a8477d-1305-4eb3-9d94-6050ef8dc6ab"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

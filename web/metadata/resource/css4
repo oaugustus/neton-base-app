@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css4",
+        "url": "./resources/css/flash.css",
+        "id": "flash"
+    },
+    "designerId": "735596c5-e06a-4dd5-9787-da0f1fb6f91a"
+}

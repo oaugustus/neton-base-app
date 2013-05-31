@@ -1,0 +1,30 @@
+.icon-white{
+    color: #fff;
+}
+
+.icon-medium{
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+.icon-exit{
+    background-image: url(../images/logout.png) !important;
+}
+
+.icon-lock{
+	background-image: url(../images/lock.png) !important;
+}
+
+.icon-user-edit{
+	background-image: url(../images/user-edit.png) !important;
+}
+
+.icon-list-menu{
+	background-image: url(../images/list-menu.png) !important;
+}
+
+.locator-menu-icon{
+    background-repeat: no-repeat;
+    background-position: center center;    
+}

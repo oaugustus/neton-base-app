@@ -1,0 +1,84 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SampleMenuPanel1",
+        "designer|userAlias": "samplemenupanel1",
+        "title": "Início"
+    },
+    "designerId": "e90321c4-c23c-411f-9df6-792d2c7b2534",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "designerId": "ca225b4c-3251-40c7-b7b1-611db29b7cfa",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "module": "panel",
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "iconAlign": "top",
+                        "iconCls": "teste",
+                        "scale": "medium",
+                        "text": "Painel",
+                        "toggleGroup": "module"
+                    },
+                    "designerId": "2d744fd3-405a-4caf-a0d5-5e6d1114f962",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "module",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "module": "smash",
+                        "layout|flex": null,
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "iconAlign": "top",
+                        "iconCls": "teste",
+                        "scale": "medium",
+                        "text": "Container",
+                        "toggleGroup": "module"
+                    },
+                    "designerId": "ed1bfcea-66ec-4318-8091-2305fe177fe1",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "module",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

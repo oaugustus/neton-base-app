@@ -1,0 +1,14 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "http://localhost/neton-base-app/web/api.js",
+        "id": "api"
+    },
+    "designerId": "ba18b735-4b45-4f2d-bbd0-44fa7a6a0030"
+}

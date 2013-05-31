@@ -1,0 +1,181 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": null,
+        "width": 298,
+        "designer|userClassName": "ui.ChangePassWindow",
+        "designer|userAlias": "changepasswindow",
+        "layout": "fit",
+        "iconCls": "icon-lock",
+        "title": "Troca de Senha",
+        "modal": true
+    },
+    "designerId": "53636f36-1cca-4cca-925b-644d33e96b27",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "form",
+                "bodyPadding": 10,
+                "title": null,
+                "fieldDefaults": [
+                    "{",
+                    "    labelAlign: 'top',",
+                    "    allowBlank: false,",
+                    "    msgTarget: 'side',",
+                    "    labelClsExtra: 'label-bold',",
+                    "    enableKeyEvents: true",
+                    "}"
+                ]
+            },
+            "designerId": "028f18e1-72c6-4996-9273-f6de68b94284",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "itemId": "txtSenha",
+                        "fieldLabel": "Senha atual",
+                        "name": "senha",
+                        "inputType": "password"
+                    },
+                    "designerId": "55a07379-381b-4416-9a8e-9aaa83f00bfd"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "initialPassField": null,
+                        "layout|anchor": "100%",
+                        "itemId": "txtNovaSenha",
+                        "fieldLabel": "Nova senha",
+                        "name": "novaSenha",
+                        "inputType": "password",
+                        "vtype": null
+                    },
+                    "designerId": "fd8bfc19-2487-4f4d-9afb-7cd15d76c8f4",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "initialPassField",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "initialPassField": "txtNovaSenha",
+                        "layout|anchor": "100%",
+                        "itemId": "txtConfirmaSenha",
+                        "fieldLabel": "Confirme a nova senha",
+                        "name": "confirmaSenha",
+                        "inputType": "password",
+                        "vtype": "password"
+                    },
+                    "designerId": "760329d9-017a-406e-b942-77bfbf543c30",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "initialPassField",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "designerId": "65f75531-bd7f-44ac-bf90-d61dd66561a3",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "b369267a-5d63-4c4c-9389-1ca0b27a17be",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "formBind": true,
+                                        "itemId": "btnConfirmar",
+                                        "scale": "medium",
+                                        "text": "Confirmar troca"
+                                    },
+                                    "designerId": "1998d35c-35ef-451a-bf9c-242c95214465"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "a37d2bb5-8a26-445e-a6b2-33c25246cc5a"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "itemId": "btnCancelar",
+                                "text": "Cancelar"
+                            },
+                            "designerId": "1024e790-e360-4080-b5b7-86586cfe82f7"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

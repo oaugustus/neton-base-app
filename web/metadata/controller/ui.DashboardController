@@ -1,0 +1,613 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeModule": "",
+        "startModule": "panel",
+        "routeAlias": "dashboard",
+        "routes": [
+            "{",
+            "",
+            "}"
+        ],
+        "designer|userClassName": "ui.DashboardController"
+    },
+    "configAlternates": {
+        "routes": "object"
+    },
+    "designerId": "4ae86203-6e98-44dd-b29a-1de4737ae823",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "activeModule",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "startModule",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "routeAlias",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "routes",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "uiViewport",
+                "selector": "uiviewport",
+                "xtype": "Ext.container.Viewport"
+            },
+            "designerId": "980e1e41-9189-4de5-a120-3d0b5fea6ed5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "exitClick",
+                "implHandler": [
+                    "Ext.Msg.confirm('Confirme', 'Deseja realmente sair do sistema?', function(btn){",
+                    "    if ('yes' == btn){",
+                    "        Actions.NetonApp_Security.logout({}, function(response){",
+                    "        Ext.ux.Router.redirect('/');",
+                    "        location.reload();",
+                    "    });",
+                    "}",
+                    "",
+                    "},this);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "dashboardpanel #btnSair"
+            },
+            "designerId": "55e5e4d1-5914-44b2-96e5-616afa7a1df9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDashboardShow",
+                "implHandler": [
+                    "var session = this.application.getSession();",
+                    "",
+                    "component.down('#btnUsuario').setText(session['user.name']).doComponentLayout();"
+                ],
+                "name": "show",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "dashboardpanel"
+            },
+            "designerId": "25ed2e35-c94d-429f-8a09-b88d826e8c1e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTrocaSenhaClick",
+                "implHandler": [
+                    "var win = Ext.widget('changepasswindow');",
+                    "",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "dashboardpanel #btnTrocaSenha"
+            },
+            "designerId": "8f155516-e16f-4828-9a76-2b847f593114"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onChangePassShow",
+                "implHandler": [
+                    "component.down('#txtSenha').focus(false, 250);"
+                ],
+                "name": "show",
+                "scope": "me",
+                "designer|targetType": "Ext.window.Window",
+                "designer|controlQuery": "changepasswindow"
+            },
+            "designerId": "d51bd8bf-6678-4f4f-95ff-f3820cca6c4d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "changePassFocusNextField",
+                "implHandler": [
+                    "if (e.getKey() == 13){",
+                    "    try{",
+                    "        textfield.nextNode().focus();",
+                    "    } catch(e){",
+                    "        if (textfield.up('form').isValid())",
+                    "\t        this.requestChangePass();",
+                    "    }",
+                    "}"
+                ],
+                "name": "keypress",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "changepasswindow #form field"
+            },
+            "designerId": "09142063-7877-47dd-991a-b9197fa1fdb7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "changePassWindow",
+                "selector": "changepasswindow",
+                "xtype": "Ext.window.Window"
+            },
+            "designerId": "d3c48fc5-b6c5-4935-be09-25d93e9cbf16"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dashboardPanel",
+                "selector": "dashboardpanel",
+                "xtype": "Ext.panel.Panel"
+            },
+            "designerId": "4d22a839-7ed4-40a9-8b53-2b02f276e72f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ctModuleWrap",
+                "selector": "dashboardpanel #ctModuleWrap",
+                "xtype": "Ext.container.Container"
+            },
+            "designerId": "a75339e0-8319-418c-9cb2-e27dc8313d7b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ctModules",
+                "selector": "dashboardpanel #ctModules",
+                "xtype": "Ext.container.Container"
+            },
+            "designerId": "2c71482a-9f58-485d-986f-7eb7cec5f57d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showDashboardPanel",
+                "implHandler": [
+                    "var viewport = this.getUiViewport();",
+                    "",
+                    "Actions.NetonApp_Security.isLogged({}, function(response){",
+                    "",
+                    "if (response != false){",
+                    "    this.application.setSession(response);",
+                    "",
+                    "    if (!viewport.down('#panelDashboard')){    ",
+                    "        viewport.add({",
+                    "            xtype: 'dashboardpanel',",
+                    "            itemId: 'panelDashboard'",
+                    "        });    ",
+                    "    }",
+                    "",
+                    "    this.getUiViewport().getLayout().setActiveItem('panelDashboard');            ",
+                    "}",
+                    "},this);"
+                ]
+            },
+            "designerId": "ed84aaea-74b6-457d-baa2-7359b18f1696"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "requestChangePass",
+                "implHandler": [
+                    "var me = this,",
+                    "    win = me.getChangePassWindow();",
+                    "",
+                    "win.setLoading('Aguarde...');",
+                    "",
+                    "Actions.NetonApp_Security.changePass(win.down('#form').getValues(), me.responseChangePass, me);"
+                ]
+            },
+            "designerId": "962165d3-254d-4127-97e1-066c189862aa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "responseChangePass",
+                "designer|params": [
+                    "response"
+                ],
+                "implHandler": [
+                    "var me = this,",
+                    "    win = me.getChangePassWindow();",
+                    "",
+                    "// se a troca de senha ocorreu com sucesso",
+                    "if (response){",
+                    "    // fecha a janela",
+                    "    win.close();",
+                    "    ",
+                    "    // exibe mensagem de sucesso na troca de senha",
+                    "    Neton.Msg.flash({",
+                    "        type: 'success',",
+                    "        msg: 'Senha alterada com sucesso!',",
+                    "        width: 250",
+                    "    });",
+                    "} else { // se não foi possível trocar a senha",
+                    "    // fecha a máscara de carregamento",
+                    "    win.setLoading(false);",
+                    "    ",
+                    "    // exibe mensagem de erro",
+                    "    Neton.Msg.flash({",
+                    "        type: 'error',",
+                    "        msg: 'A senha atual está incorreta!',",
+                    "        width: 250,",
+                    "        callback: function(){",
+                    "            win.down('#txtSenha').focus(true);",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "designerId": "b990165b-5404-410a-af5d-a046927d4382"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "changePassConfirmarTrocaClick",
+                "implHandler": [
+                    "this.requestChangePass();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "changepasswindow #btnConfirmar"
+            },
+            "designerId": "09a0d2a0-123b-4b81-84bd-bfa756912083"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "changePassCancelarClick",
+                "implHandler": [
+                    "this.getChangePassWindow().close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "changepasswindow #btnCancelar"
+            },
+            "designerId": "4d68fb18-ad07-4415-84b0-e0c058f52bec"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCtModulesRender",
+                "implHandler": [
+                    "component.getEl().on('mouseleave', this.registerCloseDelay, this);",
+                    "component.getEl().on('mouseover', this.registerOpenDelay, this);"
+                ],
+                "name": "render",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "dashboardpanel #ctModules"
+            },
+            "designerId": "3b21c7f3-8a4b-4f91-b6d5-7682b7c919b3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "registerCloseDelay",
+                "implHandler": [
+                    "var runner = new Ext.util.TaskRunner()",
+                    "me = this,",
+                    "ctModules = me.getDashboardPanel().down('#ctModules');",
+                    "",
+                    "",
+                    "// define a propriedade que avalia o fechamento do menu",
+                    "me.closeMenu = true;",
+                    "",
+                    "// cria a tarefa de fechamento do menu",
+                    "var task = runner.newTask({",
+                    "    run: function(){",
+                    "        if (me.closeMenu){",
+                    "            // ativa a toolbar de localização",
+                    "            ctModules.getLayout().setActiveItem(0);",
+                    "",
+                    "            me.openedMenu = false;",
+                    "        }",
+                    "    },",
+                    "    interval: 1000,",
+                    "    scope: me,",
+                    "    repeat: 1",
+                    "});",
+                    "",
+                    "// inicia a execução da tarefa",
+                    "task.start();",
+                    ""
+                ]
+            },
+            "designerId": "6ef534ec-1617-41b6-aa62-44a99468008f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "registerOpenDelay",
+                "implHandler": [
+                    "var runner = new Ext.util.TaskRunner(),",
+                    "    me = this,",
+                    "    ctModules = me.getDashboardPanel().down('#ctModules'),",
+                    "    activeButton = ctModules.down('button[module=\"'+me.activeModule+'\"]');",
+                    "",
+                    "",
+                    "// define a propriedade que avalia o fechamento do menu",
+                    "me.closeMenu = false;",
+                    "",
+                    "// cria a tarefa de fechamento do menu",
+                    "var task = runner.newTask({",
+                    "    run: function(){",
+                    "        if (!me.closeMenu){            \t\t\t",
+                    "            if (!me.openedMenu){",
+                    "                ctModules.down('#tabModule').setActiveTab(activeButton.up('panel'));                ",
+                    "            }",
+                    "            ctModules.getLayout().setActiveItem(1);",
+                    "            me.openedMenu = true;",
+                    "        }",
+                    "    },",
+                    "    interval: 400,",
+                    "    scope: me,",
+                    "    repeat: 1",
+                    "});",
+                    "",
+                    "// inicia a execução da tarefa",
+                    "task.start();",
+                    ""
+                ]
+            },
+            "designerId": "1e1c7b5c-b165-4ec1-b78b-8fd4e66fad5b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "buttonModuleClick",
+                "implHandler": [
+                    "// se o botão tem definida a propriedade module",
+                    "if (button.module){",
+                    "    //this.activateModule(button.module);",
+                    "    Ext.ux.Router.redirect(button.module);",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "dashboardpanel #tabModule button"
+            },
+            "designerId": "254f2e3f-ede5-43bd-ba43-318b2bbbcffe"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "activateModule",
+                "designer|params": [
+                    "module"
+                ],
+                "implHandler": [
+                    "var me = this,",
+                    "    ctModuleWrap = me.getCtModuleWrap(),",
+                    "    ctModules = me.getCtModules();",
+                    "",
+                    "// se o módulo ativo for diferente do módulo clicado",
+                    "if (me.activeModule != module){",
+                    "",
+                    "    // seta o módulo ativo",
+                    "    me.activeModule = module;    ",
+                    "",
+                    "    // se o painel do módulo não estiver presente no container de módulos",
+                    "    if (!ctModuleWrap.down('#' + module)){",
+                    "        try{",
+                    "            // adiciona o painel ao container de módulos",
+                    "            ctModuleWrap.add({",
+                    "                xtype: module,",
+                    "                itemId: module",
+                    "            });                ",
+                    "        } catch(e) {",
+                    "            console.log('Módulo: ' + module + ' não localizado!');",
+                    "        }",
+                    "    }",
+                    "",
+                    "    // ativa o módulo atual",
+                    "    ctModuleWrap.getLayout().setActiveItem(module);",
+                    "",
+                    "    // pressiona o botão",
+                    "    ctModules.down('#tabModule').down('button[module=\"'+module+'\"]').toggle(true);",
+                    "",
+                    "    // seta a localização",
+                    "    this.setLocation(module);    ",
+                    "}"
+                ]
+            },
+            "designerId": "81ffdf2f-2e15-4148-9723-8a753565241e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onModuleWrapRender",
+                "implHandler": [
+                    "this.setupRouter();",
+                    "",
+                    "if (!Ext.ux.Router.hasToken)",
+                    "\tExt.ux.Router.redirect(this.startModule);",
+                    ""
+                ],
+                "name": "render",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "dashboardpanel #ctModuleWrap"
+            },
+            "designerId": "de4b02b1-5b96-4686-a8f9-63ee036ca69c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setLocation",
+                "designer|params": [
+                    "module"
+                ],
+                "implHandler": [
+                    "var me = this,",
+                    "    menuLocation = me.getCtModules().down('#menuLocation'),",
+                    "    activeButton = me.getCtModules().down('#tabModule').down('button[module=\"'+module+'\"]');",
+                    "",
+                    "menuLocation.down('#ctModule').update(activeButton.getText());",
+                    "menuLocation.down('#ctApp').update(activeButton.up('panel').title);",
+                    "menuLocation.down('#ctIcon').removeCls(menuLocation.down('#ctIcon').cls);",
+                    "menuLocation.down('#ctIcon').addCls('locator-menu-icon ' + activeButton.iconCls);"
+                ]
+            },
+            "designerId": "d6e8dbbd-6e8c-4a5f-b873-aa66c4e6f719"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setupRouter",
+                "implHandler": [
+                    "Ext.ux.Router.init(this.application);",
+                    "",
+                    "Ext.ux.Router.on({    ",
+                    "    routemissed: function(token) {",
+                    "        Ext.Msg.show({",
+                    "            title:'Error 404',",
+                    "            msg: 'Rota não encontrada para: ' + token,",
+                    "            buttons: Ext.Msg.OK,",
+                    "            icon: Ext.Msg.ERROR",
+                    "        });",
+                    "    }",
+                    "});"
+                ]
+            },
+            "designerId": "3ce4af59-a5db-46d7-b57d-0c12a069e54d"
+        }
+    ]
+}

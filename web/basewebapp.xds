@@ -1,0 +1,172 @@
+{
+    "name": "basewebapp",
+    "settings": {
+        "urlPrefix": "http://localhost/basewebapp/",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "0d051565-525f-4c70-bdc5-3be9a272fcc3": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "85f87980-3558-4a85-b32a-5ac618b49ec7": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "a553b0a5-c16d-4460-a013-5d882eaf141e": {
+            "paths": [
+                "metadata/resource/css1"
+            ],
+            "className": "css1"
+        },
+        "1482c17c-7c96-4250-b20e-c8532baf6c47": {
+            "paths": [
+                "metadata/view/ui.Viewport",
+                "app/view/override/ui/Viewport.js",
+                "app/view/ui/Viewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "ui.Viewport"
+        },
+        "cc4f24e4-a32f-425a-8b11-9b48b365d987": {
+            "paths": [
+                "metadata/view/ui.LoginPanel",
+                "app/view/override/ui/LoginPanel.js",
+                "app/view/ui/LoginPanel.js"
+            ],
+            "className": "ui.LoginPanel"
+        },
+        "d0af4295-3539-4295-bf9e-d13daab340d1": {
+            "paths": [
+                "metadata/controller/ui.LoginController",
+                "app/controller/override/ui/LoginController.js",
+                "app/controller/ui/LoginController.js"
+            ],
+            "className": "ui.LoginController"
+        },
+        "8684dad1-1f57-4f01-927b-e97c84552beb": {
+            "paths": [
+                "metadata/resource/direct"
+            ],
+            "className": "direct"
+        },
+        "ba18b735-4b45-4f2d-bbd0-44fa7a6a0030": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "735596c5-e06a-4dd5-9787-da0f1fb6f91a": {
+            "paths": [
+                "metadata/resource/css4"
+            ],
+            "className": "css4"
+        },
+        "4ae86203-6e98-44dd-b29a-1de4737ae823": {
+            "paths": [
+                "metadata/controller/ui.DashboardController",
+                "app/controller/override/ui/DashboardController.js",
+                "app/controller/ui/DashboardController.js"
+            ],
+            "className": "ui.DashboardController"
+        },
+        "cecbb789-55f4-41ca-8284-15b8f309c0ee": {
+            "paths": [
+                "metadata/view/ui.DashboardPanel",
+                "app/view/override/ui/DashboardPanel.js",
+                "app/view/ui/DashboardPanel.js"
+            ],
+            "className": "ui.DashboardPanel"
+        },
+        "e8094b29-0f10-4dd9-8b23-2f7e09e6d246": {
+            "paths": [
+                "metadata/resource/css3"
+            ],
+            "className": "css3"
+        },
+        "53636f36-1cca-4cca-925b-644d33e96b27": {
+            "paths": [
+                "metadata/view/ui.ChangePassWindow",
+                "app/view/override/ui/ChangePassWindow.js",
+                "app/view/ui/ChangePassWindow.js"
+            ],
+            "className": "ui.ChangePassWindow"
+        },
+        "59759d72-80fb-423d-b45f-8ceaea3df4bc": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "7c522591-08be-415c-8233-5ce0f900889d": {
+            "paths": [
+                "metadata/resource/css2"
+            ],
+            "className": "css2"
+        },
+        "e90321c4-c23c-411f-9df6-792d2c7b2534": {
+            "paths": [
+                "metadata/view/SampleMenuPanel1",
+                "app/view/override/SampleMenuPanel1.js",
+                "app/view/SampleMenuPanel1.js"
+            ],
+            "className": "SampleMenuPanel1"
+        },
+        "328a9e02-3118-4dfe-b019-811757f05e65": {
+            "paths": [
+                "metadata/view/SampleMenuPanel2",
+                "app/view/override/SampleMenuPanel2.js",
+                "app/view/SampleMenuPanel2.js"
+            ],
+            "className": "SampleMenuPanel2"
+        },
+        "1176044b-bc68-48ec-980a-4ae8c03c2ba9": {
+            "paths": [
+                "metadata/controller/module.SampleController",
+                "app/controller/override/module/SampleController.js",
+                "app/controller/module/SampleController.js"
+            ],
+            "className": "module.SampleController"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "1482c17c-7c96-4250-b20e-c8532baf6c47",
+            "cc4f24e4-a32f-425a-8b11-9b48b365d987",
+            "cecbb789-55f4-41ca-8284-15b8f309c0ee",
+            "53636f36-1cca-4cca-925b-644d33e96b27",
+            "e90321c4-c23c-411f-9df6-792d2c7b2534",
+            "328a9e02-3118-4dfe-b019-811757f05e65"
+        ],
+        "store": [],
+        "controller": [
+            "d0af4295-3539-4295-bf9e-d13daab340d1",
+            "4ae86203-6e98-44dd-b29a-1de4737ae823",
+            "1176044b-bc68-48ec-980a-4ae8c03c2ba9"
+        ],
+        "model": [],
+        "resource": [
+            "0d051565-525f-4c70-bdc5-3be9a272fcc3",
+            "85f87980-3558-4a85-b32a-5ac618b49ec7",
+            "a553b0a5-c16d-4460-a013-5d882eaf141e",
+            "8684dad1-1f57-4f01-927b-e97c84552beb",
+            "ba18b735-4b45-4f2d-bbd0-44fa7a6a0030",
+            "735596c5-e06a-4dd5-9787-da0f1fb6f91a",
+            "e8094b29-0f10-4dd9-8b23-2f7e09e6d246",
+            "59759d72-80fb-423d-b45f-8ceaea3df4bc",
+            "7c522591-08be-415c-8233-5ce0f900889d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

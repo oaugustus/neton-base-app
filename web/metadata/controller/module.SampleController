@@ -1,0 +1,66 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "routeAlias": "panel",
+        "routes": [
+            "{",
+            "    'panel': 'list',",
+            "    'container': 'container'",
+            "}"
+        ],
+        "designer|userClassName": "module.SampleController"
+    },
+    "configAlternates": {
+        "routes": "object"
+    },
+    "designerId": "1176044b-bc68-48ec-980a-4ae8c03c2ba9",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "routeAlias",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "routes",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "list",
+                "implHandler": [
+                    "this.getController('ui.DashboardController').activateModule('panel');"
+                ]
+            },
+            "designerId": "49e3641b-89e7-4453-95c1-2c61c1cca693"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "container",
+                "implHandler": [
+                    "this.getController('ui.DashboardController').activateModule('container');"
+                ]
+            },
+            "designerId": "202bbfae-5ed7-49e2-98b5-48aa8f04072c"
+        }
+    ]
+}
