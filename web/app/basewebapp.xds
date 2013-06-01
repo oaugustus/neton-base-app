@@ -1,7 +1,7 @@
 {
     "name": "basewebapp",
     "settings": {
-        "urlPrefix": "http://localhost/basewebapp/",
+        "urlPrefix": "http://localhost/basewebapp/app/",
         "exportPath": ""
     },
     "xdsVersion": "2.2.2",
@@ -87,12 +87,6 @@
             ],
             "className": "ui.DashboardPanel"
         },
-        "e8094b29-0f10-4dd9-8b23-2f7e09e6d246": {
-            "paths": [
-                "metadata/resource/css3"
-            ],
-            "className": "css3"
-        },
         "53636f36-1cca-4cca-925b-644d33e96b27": {
             "paths": [
                 "metadata/view/ui.ChangePassWindow",
@@ -161,7 +155,6 @@
             "8684dad1-1f57-4f01-927b-e97c84552beb",
             "ba18b735-4b45-4f2d-bbd0-44fa7a6a0030",
             "735596c5-e06a-4dd5-9787-da0f1fb6f91a",
-            "e8094b29-0f10-4dd9-8b23-2f7e09e6d246",
             "59759d72-80fb-423d-b45f-8ceaea3df4bc",
             "7c522591-08be-415c-8233-5ce0f900889d"
         ],

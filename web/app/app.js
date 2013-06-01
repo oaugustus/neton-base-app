@@ -18,8 +18,8 @@ Ext.Loader.setConfig({
     enabled: true,
     paths: {
         Ext: '.',
-        'Ext.ux': './extjs/ux/',
-        Neton: './extjs/ux/',
+        'Ext.ux': '../extjs/ux/',
+        Neton: '../extjs/ux/',
         
     }
 });

@@ -79,8 +79,8 @@
                 "paths": [
                     "{",
                     "    \"Ext\":\".\",",
-                    "    \"Ext.ux\":\"./extjs/ux/\",",
-                    "    \"Neton\":\"./extjs/ux/\",",
+                    "    \"Ext.ux\":\"../extjs/ux/\",",
+                    "    \"Neton\":\"../extjs/ux/\",",
                     "}"
                 ],
                 "designer|displayName": "Loader"
