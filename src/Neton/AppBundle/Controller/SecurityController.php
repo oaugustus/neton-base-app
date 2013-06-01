@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Neton\DirectBundle\Annotation\Form;
 use Neton\DirectBundle\Annotation\Remote;
+use Neton\DirectBundle\Annotation\Anonymous;
 use Symfony\Component\HttpFoundation\Response;
 
 
