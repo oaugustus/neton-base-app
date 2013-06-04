@@ -12,10 +12,19 @@
             "    '/': 'index'",
             "}"
         ],
+        "authError": [
+            "{",
+            "    'usuario' : {",
+            "        'message' : 'Usuário ou senha inválidos',",
+            "        'width': 250",
+            "    }",
+            "}"
+        ],
         "designer|userClassName": "ui.LoginController"
     },
     "configAlternates": {
-        "routes": "object"
+        "routes": "object",
+        "authError": "object"
     },
     "designerId": "d0af4295-3539-4295-bf9e-d13daab340d1",
     "customConfigs": [
@@ -27,6 +36,11 @@
         {
             "group": "(Custom Properties)",
             "name": "routes",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "authError",
             "type": "string"
         }
     ],
@@ -207,28 +221,26 @@
             },
             "codeClass": null,
             "userConfig": {
-                "authError": [
-                    "{",
-                    "    'usuario' : {",
-                    "        'message' : 'Usuário ou senha inválidos',",
-                    "        'width': 250",
-                    "    }",
-                    "}"
-                ],
                 "fn": "onAuthResponse",
                 "designer|params": [
                     "response"
                 ],
                 "implHandler": [
+                    "var loginPanel = this.getLoginPanel();",
+                    "",
+                    "loginPanel.setLoading(false);",
+                    "",
                     "// se a autenticação ocorreu",
                     "if (response.success){",
-                    "    this.getLoginPanel().setLoading(false);",
                     "    this.getController('ui.DashboardController').showDashboardPanel();",
                     "} else {",
                     "    Neton.Msg.flash({",
                     "        type: 'error',",
                     "        msg: this.authError[response.message].message,",
-                    "        width: this.authError[response.message].width",
+                    "        width: this.authError[response.message].width,",
+                    "        callback: function(){",
+                    "            loginPanel.down('#txtLogin').focus(true, 250);",
+                    "        }",
                     "    });",
                     "}"
                 ]
@@ -236,14 +248,7 @@
             "configAlternates": {
                 "authError": "object"
             },
-            "designerId": "bbd82a84-f73b-4306-bf7d-7c41318cf334",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "authError",
-                    "type": "string"
-                }
-            ]
+            "designerId": "bbd82a84-f73b-4306-bf7d-7c41318cf334"
         },
         {
             "type": "basicfunction",

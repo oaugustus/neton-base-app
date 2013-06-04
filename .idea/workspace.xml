@@ -8,7 +8,7 @@
     <file path="/routing_dev.yml" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1369526713899" ignored="false" />
     <file path="/config.yml" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1370022749056" ignored="false" />
     <file path="/SessionController.php" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1369528358751" ignored="false" />
-    <file path="/SecurityController.php" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1370094653603" ignored="false" />
+    <file path="/SecurityController.php" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1370367931927" ignored="false" />
     <file path="/Filter.php" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1369591911438" ignored="false" />
     <file path="/FlatScalar.php" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1369592077574" ignored="false" />
     <file path="/UserAdapter.php" changelist="bce63e7a-def8-4a19-912d-bfd65c2da55c" time="1369593527691" ignored="false" />
@@ -39,26 +39,10 @@
       <file leaf-file-name="SecurityController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Neton/AppBundle/Controller/SecurityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="296" selection-end="296" vertical-scroll-proportion="0.2027027">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="26" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Api.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/oaugustus/direct-bundle/Neton/DirectBundle/Api/Api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="56" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="57" column="8" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.4054054">
+              <folding>
+                <element signature="e#46#105#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,15 +51,6 @@
         <entry file="file://$PROJECT_DIR$/vendor/oaugustus/direct-bundle/Neton/DirectBundle/Api/ControllerApi.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="89" column="35" selection-start="2188" selection-end="2203" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Router.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/oaugustus/direct-bundle/Neton/DirectBundle/Router/Router.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="31" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,7 +77,34 @@
       <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="-1.625">
+            <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/oaugustus/direct-bundle/Neton/DirectBundle/Router/Router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="31" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Api.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/oaugustus/direct-bundle/Neton/DirectBundle/Api/Api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="56" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="26" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,7 +168,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -535,6 +536,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -617,7 +619,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26688632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27182865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -779,15 +781,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="-1.625">
+        <state line="27" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Neton/AppBundle/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="296" selection-end="296" vertical-scroll-proportion="0.2027027">
-          <folding />
+        <state line="57" column="8" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.4054054">
+          <folding>
+            <element signature="e#46#105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

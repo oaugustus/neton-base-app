@@ -55,6 +55,7 @@ Ext.define('App.controller.ui.DashboardController', {
         Ext.Msg.confirm('Confirme', 'Deseja realmente sair do sistema?', function(btn){
             if ('yes' == btn){
                 Actions.NetonApp_Security.logout({}, function(response){
+                Ext.ux.Router.redirect('/');
                 location.reload();
             });
         }

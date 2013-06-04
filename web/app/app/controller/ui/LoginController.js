@@ -20,6 +20,12 @@ Ext.define('App.controller.ui.LoginController', {
     routes: {
         '/': 'index'
     },
+    authError: {
+        usuario: {
+            message: 'Usuário ou senha inválidos',
+            width: 250
+        }
+    },
 
     refs: [
         {
@@ -98,15 +104,21 @@ Ext.define('App.controller.ui.LoginController', {
     },
 
     onAuthResponse: function(response) {
+        var loginPanel = this.getLoginPanel();
+
+        loginPanel.setLoading(false);
+
         // se a autenticação ocorreu
         if (response.success){
-            this.getLoginPanel().setLoading(false);
             this.getController('ui.DashboardController').showDashboardPanel();
         } else {
             Neton.Msg.flash({
                 type: 'error',
                 msg: this.authError[response.message].message,
-                width: this.authError[response.message].width
+                width: this.authError[response.message].width,
+                callback: function(){
+                    loginPanel.down('#txtLogin').focus(true, 250);
+                }
             });
         }
     },
